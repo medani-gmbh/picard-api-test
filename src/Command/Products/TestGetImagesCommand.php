@@ -26,6 +26,8 @@ class TestGetImagesCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        // TODO:
+        /*
         $io = new SymfonyStyle($input, $output);
         $arg1 = $input->getArgument('arg1');
 
@@ -38,6 +40,7 @@ class TestGetImagesCommand extends Command
         }
 
         $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
+        */
 
         return Command::SUCCESS;
     }
