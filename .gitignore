@@ -20,3 +20,13 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+# don't checkin generated code 
+lib/
+
+# and no modules
+openapi/node_modules
+
+# no ide files
+.vscode 
+

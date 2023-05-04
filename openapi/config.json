@@ -1,0 +1,6 @@
+{
+    "invokerPackage": "RtgConnector\\RtgConnectBundle",
+    "variableNamingConvention": "camelCase",
+    "gitUserId": "mwd",
+    "gitRepoId": "picard-rtg-connector"
+}
