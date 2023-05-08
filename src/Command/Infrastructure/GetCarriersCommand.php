@@ -30,7 +30,7 @@ class GetCarriersCommand extends Command
         $api = new Api();
         $infrastructuralApi = $api->getInfrastructuralApi();
 
-        $response = $infrastructuralApi->getLanguages($api->getStocklistToken());
+        $response = $infrastructuralApi->getCarriers($api->getStocklistToken());
 
         $io->title("Get Carriers");
         $io->writeln($response);
