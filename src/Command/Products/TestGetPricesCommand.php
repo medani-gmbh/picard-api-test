@@ -35,7 +35,7 @@ class TestGetPricesCommand extends Command
         $response = $productApi->getPrices($api->getStocklistToken());
 
         $io->title("Get Prices");
-        $io->writeln($response);
+        dump($response);
 
         return Command::SUCCESS;
     }

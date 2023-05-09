@@ -33,7 +33,7 @@ class TestGetProductsCommand extends Command
         $response = $productApi->getProducts($api->getStocklistToken());
 
         $io->title("Get Products");
-        $io->writeln($response);
+        dump($response);
 
         return Command::SUCCESS;
     }

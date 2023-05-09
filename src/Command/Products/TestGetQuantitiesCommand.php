@@ -35,7 +35,7 @@ class TestGetQuantitiesCommand extends Command
         $response = $productApi->getQuantities($api->getStocklistToken());
 
         $io->title("Get Quantities");
-        $io->writeln($response);
+        dump($response);
 
         return Command::SUCCESS;
     }

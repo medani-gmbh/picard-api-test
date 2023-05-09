@@ -35,7 +35,7 @@ class TestGetLineartechProductsCommand extends Command
         $response = $productApi->getLineartechProducts($api->getStocklistToken());
 
         $io->title("Get LineartechProducts");
-        $io->writeln($response);
+        dump($response);
 
         return Command::SUCCESS;
     }
