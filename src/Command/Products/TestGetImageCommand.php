@@ -16,24 +16,24 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class TestGetImageCommand extends Command
 {
-    protected function configure(): void
-    {
-        $this
-            ->addOption('filename', 'f', InputOption::VALUE_REQUIRED, 'filename to get', 'abziehhuelse.jpg')            
-        ;
-    }
+    // protected function configure(): void
+    // {
+    //     $this
+    //         ->addOption('filename', 'f', InputOption::VALUE_REQUIRED, 'filename to get', 'abziehhuelse.jpg')            
+    //     ;
+    // }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $io = new SymfonyStyle($input, $output);
-        $io->title("Test getImage");
+        // $io = new SymfonyStyle($input, $output);
+        // $io->title("Test getImage");
 
-        $api = new Api();
-        $productApi = $api->getProductApi();
+        // $api = new Api();
+        // $productApi = $api->getProductApi();
 
-        $response = $productApi->getImage($input->getOption('filename'));
-        $output->writeln($response);
+        // $response = $productApi->getImage($input->getOption('filename'));
+        // $output->writeln($response);
 
-        return Command::SUCCESS;
+        // return Command::SUCCESS;
     }
 }
