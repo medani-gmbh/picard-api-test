@@ -11,10 +11,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
-    name: 'product:get-one',
-    description: 'Gets a single product (with prices, quantity and image)',
+    name: 'product:get-one-with-prices',
+    description: 'Gets a single product (id 10001399) with prices',
 )]
-class ProductGetSingleProductCommand extends Command
+class ProductGetSingleProductWithPricesCommand extends Command
 {
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -26,17 +26,14 @@ class ProductGetSingleProductCommand extends Command
 
         $builder = new ProductsRequestBodyBuilder();
         $productsRequestBody = $builder
-            ->setLimit(1)
-            ->setOffset(1)
+            ->setProductId(10001399)
             ->withPrices()
-            ->withQuantity()
-            ->withImage()
             ->build();
 
 
 
         $response = $productApi->getProducts($api->getStocklistToken(), $productsRequestBody);
-        $io->title("Get Single Product");
+        $io->title("Get Single Product with Prices");
         dump($response);
 
         return Command::SUCCESS;
