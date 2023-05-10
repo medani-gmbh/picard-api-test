@@ -73,7 +73,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "RtgConnector\\RtgConnectBundle\\": "lib/lib/"
+            "RtgConnector\\RtgConnectBundle\\": "lib/RtgConnectBundle/lib/"
         }
     },
     "replace": {
