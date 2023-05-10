@@ -14,6 +14,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 #[AsCommand(
     name: 'test:get-lineartech-products',
     description: 'Gets a list of all LineartechProducts',
+    hidden: true
 )]
 class TestGetLineartechProductsCommand extends Command
 {

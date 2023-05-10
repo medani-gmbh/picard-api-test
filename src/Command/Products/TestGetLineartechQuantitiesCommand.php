@@ -12,6 +12,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 #[AsCommand(
     name: 'test:get-lineartech-quantities',
     description: 'Gets a list of all LineartechQuantities',
+    hidden: true
 )]
 class TestGetLineartechQuantitiesCommand extends Command
 {
