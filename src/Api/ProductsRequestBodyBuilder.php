@@ -5,6 +5,8 @@ use RtgConnector\RtgConnectBundle\Model\ProductsRequestBody;
 
 class ProductsRequestBodyBuilder implements ProductsRequestBodyBuilderInterface {
 
+    use DateFilterBuilderTrait;
+
     private $object;
 
     public function __construct() {
