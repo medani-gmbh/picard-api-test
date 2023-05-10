@@ -14,7 +14,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
     name: 'product:get-one',
     description: 'Gets a single product',
 )]
-class TestGetSingleProductCommand extends Command
+class ProductGetSingleProductCommand extends Command
 {
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -38,7 +38,6 @@ class TestGetSingleProductCommand extends Command
         $response = $productApi->getProducts($api->getStocklistToken(), $productsRequestBody);
         $io->title("Get Single Product");
         dump($response);
-        // $io->writeln($response);
 
         return Command::SUCCESS;
     }
