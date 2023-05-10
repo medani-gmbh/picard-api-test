@@ -15,13 +15,6 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class GetCategoriesCommand extends Command
 {
-    protected function configure(): void
-    {
-        // $this
-        //     ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
-        //     ->addOption('option1', null, InputOption::VALUE_NONE, 'Option description')
-        // ;
-    }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
@@ -32,7 +25,7 @@ class GetCategoriesCommand extends Command
         $response = $infrastructuralApi->getProductCategories($api->getStocklistToken());
 
         $io->title("Get Categories");
-        $io->writeln($response);
+        dump($response);
 
         return Command::SUCCESS;
     }
