@@ -29,7 +29,12 @@ class ProductsRequestBodyBuilder implements ProductsRequestBodyBuilderInterface 
     }
 
     public function setProductId(int $productId): ProductsRequestBodyBuilder {
-        $this->object->setProductId($productId);
+        $this->object->setProductId([$productId]);
+        return $this;
+    }
+
+    public function setProductIds(array $productIds): ProductsRequestBodyBuilder {
+        $this->object->setProductId($productIds);
         return $this;
     }
 
