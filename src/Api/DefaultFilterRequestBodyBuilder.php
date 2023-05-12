@@ -28,8 +28,8 @@ class DefaultFilterRequestBodyBuilder implements DefaultFilterRequestBodyBuilder
         return $this;
     }
 
-    public function forceFullData(): DefaultFilterRequestBodyBuilder {
-        $this->object->setForceFullData("true");
+    public function makeFullUpdate(): DefaultFilterRequestBodyBuilder {
+        $this->object->setMakeFullUpdate("true");
         return $this;
     }
 

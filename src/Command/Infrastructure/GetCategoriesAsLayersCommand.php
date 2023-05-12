@@ -3,6 +3,8 @@
 namespace App\Command\Infrastructure;
 
 use App\Api;
+use App\Api\DefaultFilterRequestBodyBuilder;
+use RtgConnector\RtgConnectBundle\Model\DefaultFilterRequestBody;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -22,7 +24,11 @@ class GetCategoriesAsLayersCommand extends Command
         $api = new Api();
         $infrastructuralApi = $api->getInfrastructuralApi();
 
-        $response = $infrastructuralApi->getProductCategories($api->getStocklistToken());
+        $builder = new DefaultFilterRequestBodyBuilder();
+        $request = $builder->makeFullUpdate()->build();
+
+        $response = $infrastructuralApi->getProductCategories($api->getStocklistToken(), $request);
+
 
         $io->title("Get Categories As Layers");
 
