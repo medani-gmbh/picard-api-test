@@ -67,4 +67,19 @@ class ProductsRequestBodyBuilder implements ProductsRequestBodyBuilderInterface 
         return $this->object;
     }
 
+    public function makeFullUpdate(): ProductsRequestBodyBuilder {
+        $this->object->setMakeFullUpdate("true");
+        return $this;
+    }
+
+    public function withProductIds(array $ids): ProductsRequestBodyBuilder {
+        $this->object->setProductId($ids);
+        return $this;
+    }
+
+    public function clear(): bool {
+        $this->object = new ProductsRequestBody();
+        return !!($this->object);
+    }
+
 }
