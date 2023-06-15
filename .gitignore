@@ -30,3 +30,5 @@ openapi/node_modules
 # no ide files
 .vscode 
 
+# no txt files, i normally use them to save sth via pipe in the shell
+*.txt
